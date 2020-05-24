@@ -33,9 +33,9 @@ class PetsController < ApplicationController
 
   post '/pets/:id' do
     ####### bug fix
-    if !params[:pet].keys.include?("owner_ids")
-    params[:pet]["owner_ids"] = []
-    end
+    # if !params[:pet].keys.include?("owner_ids")
+    # params[:pet]["owner_ids"] = []
+    # end
     #######
 
     @pet = Pet.find_by_id(params[:id])
